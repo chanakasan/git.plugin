@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source $nex_git_path/src/lib/git.sh
+source $nx_git_root/src/elements/git.sh
 
 main() {
   local a1="$1"
@@ -16,10 +16,10 @@ main() {
 }
 
 source_files() {
-  if [ -z "$nex_git_path" ]; then
-    export nex_git_path=$HOME/nex-git
+  if [ -z "$nx_git_root" ]; then
+    export nx_git_root=$HOME/nex-git
   fi
-  . $nex_git_path/src/bash/main.sh
+  . $nx_git_root/src/bash/main.sh
 }
 
 # _end_
