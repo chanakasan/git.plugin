@@ -73,7 +73,11 @@ g-wip() {
 }
 
 g-rev() {
-  git commit -m "rev" "$@"
+  if [[ -z "$1" || $1 == "-a" ]]; then
+    git commit -m "rev" "$@"
+  else
+    git commit -m "rev $1" "${@:2}"
+  fi
 }
 
 g-first() {

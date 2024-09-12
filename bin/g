@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source $nx_git_root/src/elements/git.sh
+source $nx_git_root/src/includes/git.sh
 
 main() {
   local a1="$1"
