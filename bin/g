@@ -2,13 +2,26 @@
 
 source $nx_git_root/src/includes/git.sh
 
-main() {
-  local a1="$1"
-  local a2="$2"
-  local fn=g-$a1
-  if [ -z "$a1" ]; then
-    git status
-  elif [[ $(type -t $fn ) == function ]]; then
+_g () {
+  local base=$nx_git_root
+  if [[ -z "$1" ]]; then
+    _g_prompt
+  else
+    _g_try $1
+  fi
+}
+
+_g_prompt() {
+  local value
+  read -p "g: " value
+  if [[ -n $value ]]; then
+    _g_try $value
+  fi
+}
+
+_g_try() {
+  local fn=g-$1
+  if [[ $(type -t $fn ) == function ]]; then
     $fn "${@:2}"
   else
     git "$@"
@@ -22,5 +35,4 @@ source_files() {
   . $nx_git_root/src/bash/main.sh
 }
 
-# _end_
-main "$@"
+_g "$@"
