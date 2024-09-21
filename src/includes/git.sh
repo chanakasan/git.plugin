@@ -1,9 +1,9 @@
 # vim:ft=sh:
 
 g-help() {
-  echo '+==========+'
-  echo '| mod_git  |'
-  echo '+==========+'
+  echo '+=================+'
+  echo '| nex git.plugin  |'
+  echo '+=================+'
 }
 
 g-po() {

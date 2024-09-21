@@ -1,0 +1,17 @@
+
+# old
+_g_prompt2() {
+  local value
+  read -p "g: " value
+  if [[ -n $value ]]; then
+    _g_try $value
+  fi
+}
+
+source_files() {
+  if [ -z "$nx_git_root" ]; then
+    export nx_git_root=$HOME/nex-git
+  fi
+  . $nx_git_root/src/bash/main.sh
+}
+
