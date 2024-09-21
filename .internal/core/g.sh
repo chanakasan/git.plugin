@@ -19,32 +19,38 @@ _g_prompt() {
       read -e -p "g: $args " input
     fi
 
-    if [[ -z "$input" ]]; then
+    # if [[ -z "$input" ]]; then
+    #   break
+    # fi
+
+    if [[ "$input" == "\`" ]]; then
       break
     fi
 
-    if [[ $n == 1 && $input == "s" ]]; then
-      git status
-      n=2
+    if [[ -z $args && $input == "s" ]]; then
+      args="status"
       break
     fi
 
     #<< append args
-    if [[ "${input: -1}" == "/" ]]; then
+    if [[ -z $input ]]; then
+      : # do nothin
+    elif [[ "${input: -1}" == "/" ]]; then
       args="${args}${input}"
     elif [[ "${input: -1}" == "+" ]]; then
       args="${args}${input%+}"
-    elif [[ $n == 1 && -z $args ]]; then
+    elif [[ -z $args ]]; then
       args="${input}"
     else
       args="${args} ${input}"
     fi
     #>>
+    
+    n=2
   done
 
   if [[ -n $args ]]; then
     command="git $args"
-    echo
     $command
   fi
 }

@@ -1,6 +1,7 @@
 #!/bin/bash
 
 source $nx_git_root/.internal/core/g.sh
+# source $nx_git_root/.internal/wip/one.sh
 source $nx_git_root/src/includes/git.sh
 
 _g_main "$@"
