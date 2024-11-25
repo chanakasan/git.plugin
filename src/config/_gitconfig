@@ -20,6 +20,7 @@
 
   # modify
   co = checkout
+  com = commit
   cp = cherry-pick
   ff = merge --ff-only
   noff = merge --no-ff
@@ -49,6 +50,8 @@
   # Goodness (summary of diff lines added/removed/total)
   gn = goodness
   gnc = goodness --cached
+  l = log --first-parent
+  lg = log --first-parent
 
   # Fancy logging.
   #   h = head

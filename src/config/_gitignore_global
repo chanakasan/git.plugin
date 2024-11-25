@@ -70,9 +70,9 @@ cypress/videos
 # special function #
 ###########
 .ignore/
-.local/
 .local
-.doc/
+.user
+.script
 
 # local #
 #########
