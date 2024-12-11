@@ -1,0 +1,3 @@
+#!/bin/bash
+
+source $nx_git_root/main/g.sh
