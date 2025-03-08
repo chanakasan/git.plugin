@@ -13,8 +13,9 @@
   # read
   s = status
   b = branch
-  l = log --oneline
-  lg = log
+  l = log
+  l1 = log --decorate --oneline --all --graph
+  l2 = log --oneline --branches --not HEAD
   lfp = log --first-parent --oneline
 
   # select
@@ -28,10 +29,11 @@
   noff = merge --no-ff
 
   # remote
-  pushom = push origin main
-  pullom = pull origin main
-  pusho = push origin
-  pullo = pull origin
+  pom = push origin main
+  push-om = push origin main
+  pull-om = pull origin main
+  push-oprod = push origin production
+  pull-oprod = pull origin production
   
   # most used
   # c = commit --verbose
@@ -41,10 +43,11 @@
   # ir = rebase -i HEAD~10
 
   # diff
-  dif = diff
+  df = diff
   dc = diff --cached
-  ds = diff --stat=160,120
-  d1 = diff HEAD~1
+  ds = diff --staged
+  dst = diff --stat=160,120
+  dl = diff HEAD~1
 
   vish = !gitk
 

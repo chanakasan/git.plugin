@@ -68,28 +68,26 @@ tags
 cypress/videos
 .php_cs.cache
 
-# special folder #
+# local folders #
 ###########
+.*box/
 .ignore/
 .local
 .config
 .stash
 .user
 .script
+.prompts/
 
-# special function #
-#######
+# local files #
+#########
 vscode.sh
 mux.sh
-
-# local #
-#########
 .agignore
 .projections.json
 .byebug_history
 Procfile.local
 Guardfile.local
 .gitignore-local
-
 
 
