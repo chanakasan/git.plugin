@@ -10,35 +10,28 @@
 [core]
 	excludesfile = ~/.gitignore_global
 [alias]
-  # read
-  s = status
+  # shorthands
   b = branch
+  s = status
   l = log
-  l1 = log --decorate --oneline --all --graph
-  l2 = log --oneline --branches --not HEAD
-  lfp = log --first-parent --oneline
-
-  # select
-  aa = add --all
-
-  # modify
   co = checkout
   com = commit
   cp = cherry-pick
+
+  # utils
+  aa = add --all
+  lfp = log --first-parent --oneline
+  l1 = log --oneline
+  l2 = log --decorate --oneline --all --graph
+  l3 = log --oneline --branches --not HEAD
   ff = merge --ff-only
   noff = merge --no-ff
-
+  am = commit --amend
+  c = commit --verbose
   # remote
   pom = push origin main
-  push-om = push origin main
-  pull-om = pull origin main
-  push-oprod = push origin production
-  pull-oprod = pull origin production
+  pullom = pull origin main
   
-  # most used
-  # c = commit --verbose
-  # amend = commit --amend
-
   # rebase
   # ir = rebase -i HEAD~10
 

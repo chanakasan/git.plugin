@@ -78,6 +78,7 @@ cypress/videos
 .user
 .script
 .prompts/
+trash/
 
 # local files #
 #########
@@ -91,3 +92,4 @@ Guardfile.local
 .gitignore-local
 
 
+@*/
